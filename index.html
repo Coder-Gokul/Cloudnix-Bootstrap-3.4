@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css"
+      integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body>
+    <div class="container-fluid">
+      <!-- header section -->
+      <section class="header text-center bg-info text-info">
+        <h1>GOKULRAJ P</h1>
+      </section>
+
+      <!-- middle section -->
+      <section class="container">
+        <div class="row">
+          <!-- Tabs Navigation -->
+          <div class="col-xs-12 col-sm-4">
+            <ul class="nav nav-pills">
+              <li role="presentation" class="active col-xs-3 col-sm-12">
+                <a href="#Objective" data-toggle="tab"><span class="icons glyphicon glyphicon-bookmark"></span><span class="navTitle">Objective</span></a>
+              </li>
+              <li role="presentation" class="col-xs-3 col-sm-12">
+                <a href="#Education" data-toggle="tab"><span class="icons glyphicon glyphicon-book"></span><span class="navTitle">Education</span></a>
+              </li>
+
+              <li role="presentation" class="col-xs-3 col-sm-12">
+                <a href="#Projects" data-toggle="tab"><span class="icons glyphicon glyphicon-file"></span><span class="navTitle">Projects</span></a>
+              </li>
+              <li role="presentation" class="col-xs-3 col-sm-12">
+                <a href="#Experience" data-toggle="tab"><span class="icons glyphicon glyphicon-briefcase"></span><span class="navTitle">Experience</span></a>
+              </li>
+              <li role="presentation" class="col-xs-3 col-sm-12">
+                <a href="#References" data-toggle="tab"><span class="icons glyphicon glyphicon-paperclip"></span><span class="navTitle">References</span></a>
+              </li>
+            </ul>
+          </div>
+          <!-- Tab Content -->
+          <div class="tab-content col-xs-12 col-sm-8">
+            <div class="tab-pane active" id="Objective">
+                Proactive MERN stack developer with expertise in React, dedicated
+                to creating impactful web applications and staying abreast of the
+                latest technologies for ongoing innovation.
+            </div>
+            <div class="tab-pane" id="Education">
+                <ul class="list content">
+                    <li>
+                      <span>MERN Stack Development - Entri Elevate</span>
+                      <span class="year">2023 - 2024</span>
+                    </li>
+                    <li>
+                      Backend Masterclass - Airtribe <span class="year">2024</span>
+                    </li>
+                    <li>JavaScript - Guvi <span class="year">2023</span></li>
+                  </ul>
+            </div>
+            <div class="tab-pane" id="Experience">
+                <ul class="list content">
+                    <li>
+                      Front-end Developer - Cloudnix
+                      <span class="year">2024 - Present</span>
+                    </li>
+                    <li>Internship - Entri Elevate <span class="year">2024</span></li>
+                    <li>Internship - Klart'Digi <span class="year">2023</span></li>
+                  </ul>
+            </div>
+            <div class="tab-pane" id="Projects">
+                <ul class="list content">
+                    <li>
+                      Restaurant Website
+                      <span class="year"
+                        ><span class="sub-heading">Technologies:</span> HTML5, CSS,
+                        JavaScript</span
+                      >
+                    </li>
+                    <li>
+                      Portfolio Website
+                      <span class="year"
+                        ><span class="sub-heading">Technologies:</span> HTML5, CSS,
+                        JavaScript</span
+                      >
+                    </li>
+                    <li>
+                      Clipboard Website
+                      <span class="year tech"
+                        ><span class="sub-heading">Technologies:</span> React,
+                        Tailwind</span
+                      >
+                    </li>
+                    <li>
+                      Weather App
+                      <span class="year"
+                        ><span class="sub-heading">Technologies:</span> HTML5, CSS,
+                        JavaScript</span
+                      >
+                    </li>
+                  </ul>
+            </div>
+            <div class="tab-pane" id="References">
+                <ul class="list content">
+                    <li>John Doe - Front-end Developer at Tech Corp</li>
+                    <li>Jane Smith - Senior Manager at XYZ Ltd.</li>
+                    <li>Michael Brown - Lead Developer at WebWorks</li>
+                  </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- footer section -->
+      <div
+      id="mypage_footer"
+      class="bg-info text-info text-center p-4 h6 text-uppercase rounded"
+    >
+      <footer>
+        <div class="footer-title">Contact Info</div>
+        <div class="footer-info">
+          <p class="number"><span>Phone:</span>+91 7339357500</p>
+          <p><span>Email:</span> gokulraj@cloudnix.com</p>
+        </div>
+      </footer>
+    </div>
+
+    <!-- JavaScript section -->
+
+      <div class="form-container">
+        <h3 class="heading text-info text-center">Find Max Number</h3>
+        <div class="card p-4 border-1 border-danger ">
+            <form  class="form-inline"  onsubmit="return max();">
+                <div class=" form-group mb-3">
+                    <label for="num1" class="form-label ">Number 1:<span class="red-asterisk">*</span></label>
+                    <input class="form-control" type="number" id="num1" placeholder="Enter first number" required>
+                </div>
+                <div class="form-group mb-3">
+                    <label for="num2" class="form-label">Number 2:<span class="red-asterisk">*</span></label>
+                    <input class="form-control" type="number" id="num2" placeholder="Enter second number" required>
+                </div>
+                <div class="btn">
+                  <button type="submit" id="maxbtn" class="btn btn-primary ">Find Max</button>
+                </div>
+                <div id="max_result" class="text-center text-success"></div>
+                <div id="max_error" class="text-center text-danger"></div>
+            </form>
+        </div>
+    </div>
+
+
+    <div class="form-container ">
+      <h3 class="heading text-info text-center">Reverse a String</h3>
+      <div class="card p-4 border-1 border-danger ">
+          <form  class="form-inline" onsubmit="reverse(); return false;">
+              <div class="form-group mb-3">
+                  <label for="stringInput" class="form-label">Enter a string:<span class="red-asterisk">*</span></label>
+                  <input type="text" id="stringInput" class="form-control" placeholder="Enter your string" required>
+              </div>
+              <div class="btn">
+                <button type="submit" id="reverseBtn" class="btn btn-primary">Reverse</button>
+              </div>
+              <div id="reverse_result" class="text-center text-success"></div>
+              <div id="reverse_error" class="text-center text-danger"></div>
+          </form>
+      </div>
+  </div>
+
+
+  <div class="form-container ">
+    <h3 class="heading text-info text-center">Find Longest Word</h3>
+    <div class="card p-4 border-1 border-danger ">
+        <form class="form-inline" onsubmit="FindLongestWord(); return false;">
+            <div class="form-group mb-3">
+                <label for="wordInput" class="form-label">Enter comma-separated words:<span class="red-asterisk">*</span></label>
+                <input type="text" id="wordInput" class="form-control" list="languages" placeholder="e.g., apple, banana, cherry, date" required>
+              </div>
+              <div class="btn">
+                  <button type="submit" id="findLongestBtn" class="btn btn-primary">Find Longest Word</button>
+                </div>
+              <div id="longestWord_result" class="text-center text-success"></div>
+              <div id="longestWord_error" class="text-center text-danger"></div>
+          </form>
+      </div>
+  </div>
+
+  <div class="form-container ">
+    <h3 class="heading  text-info text-center">Resume Builder</h3>
+    <div class="card p-4 border-1 border-danger" >
+        <form class="form-inline" onsubmit="saveDetails(); return false;">
+            <div class="form-group">
+                <label for="nameInput" class="form-label">Name:<span class="red-asterisk">*</span></label>
+                <input type="text" id="nameInput" class="form-control" placeholder="Enter your name" required>
+            </div>
+            <div class="form-group">
+                <label for="phoneInput" class="form-label">Mobile:<span class="red-asterisk">*</span></label>
+                <input type="text" id="phoneInput" class="form-control" placeholder="Enter your phone number" required>
+            </div>
+            <div class="btn">
+              <button type="submit" id="saveBtn" class="btn btn-primary">Save</button>
+            </div>
+            <div id="cookie_error" class="text-center text-danger"></div>
+            <div id="cookie_result" class="text-center text-success"></div>
+        </form>
+    </div>
+</div>
+
+    <script
+      src="https://code.jquery.com/jquery-1.12.4.min.js"
+      integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js"
+      integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd"
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js"></script>
+  </body>
+</html>

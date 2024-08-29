@@ -1,0 +1,261 @@
+/* General Styles */
+.header,
+.footer {
+  padding: 4px;
+  color: #ffffff; /* Use hexadecimal or named color for consistency */
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  padding-bottom: 20px;
+  z-index: 100;
+  margin-bottom: 55px !important;
+  border: 3px solid ;
+  border-radius: 10px;
+  box-shadow: 3px 3px 10px 0;
+}
+
+.footer {
+  margin-top: 65px;
+  background-color: #80a04a; /* Primary color */
+}
+
+/* Navigation Pills */
+.nav-pills > li {
+  float: none;
+  font-weight: bold;
+  font-size: large;
+  
+}
+
+.nav-pills > li > a {
+  color: #31708F ; /* Using hexadecimal color for consistency */
+}
+
+.nav-pills > li.active > a {
+  background-color: #D9EDF7 !important; /* Primary color */
+  color: #31708F !important; /* Primary color */
+  border: 3px solid ;
+  border-radius: 10px;
+  box-shadow: 3px 3px 10px 0;
+}
+
+.icons{
+    margin-right: 10px;
+    font-size: 15px;
+}
+
+
+/* Tab Content */
+.tab-content > .tab-pane {
+  font-size: medium;
+  padding: 15px;
+}
+
+
+.tab-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 230px;
+}
+
+/* Responsive Styles */
+@media (max-width: 767px) {
+  .nav-pills {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+  }
+
+  .nav-pills > li {
+    font-size: small;
+    padding: 0;
+    flex: 1;
+    text-align: center;
+    margin-bottom: 0;
+  }
+
+  .nav-pills > li > a {
+    padding: 12px 4px !important;
+  }
+
+  .tab-content > .tab-pane {
+    font-size: small;
+    margin-top: 10px;
+    padding: 15px;
+  }
+
+  .header,
+  .footer {
+    padding: 1px;
+  }
+}
+
+/* Form Styles */
+.form-container {
+  font-family: "Poppins", sans-serif;
+  margin-top: 50px;
+}
+
+.heading {
+  font-weight: bold;
+}
+
+/* Card Component */
+.card {
+  width: 400px;
+  margin: 10px auto;
+  padding: 40px;
+  background-color: #D9EDF7;
+  border: 3px solid #83bbd6;
+  border-radius: 10px;
+  box-shadow: 1px 1px 10px 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.form-inline {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.form-group {
+  font-size: medium;
+  margin: 20px;
+}
+
+.form-group input {
+  width: 300px !important;
+  padding: 18px;
+}
+
+/* Result and Error Messages */
+#max_result,
+#reverse_result,
+#longestWord_result,
+#cookie_result {
+  margin-top: 15px;
+  font-weight: bold;
+  font-size: 18px;
+  color: #000000; /* Use hexadecimal color for consistency */
+  text-align: center;
+}
+
+#max_error,
+#cookie_error,
+#longestWord_error,
+#reverse_error {
+  color: #e74c3c; /* Error color */
+  margin-top: 15px;
+  font-weight: 400;
+  font-size: 18px;
+  text-align: center;
+}
+
+.red-asterisk {
+  color: red;
+  font-size: 20px;
+}
+
+button{
+    margin-top: 20px !important;
+    width: 60%;
+}
+
+
+/* Footer Section */
+#mypage_footer {
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 10px;
+  margin-top: 55px;
+  border: 3px solid ;
+  border-radius: 10px;
+  box-shadow: 3px 3px 10px 0;
+}
+
+.footer-title {
+  font-size: 1.7rem;
+  font-family: var(--font1);
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.footer-info {
+  text-align: left;
+}
+
+.footer-info span {
+  font-family: var(--font1);
+  font-weight: 600;
+  margin-right: 10px;
+}
+
+.footer-info p {
+  font-size: 1.2rem;
+  font-family: var(--font3);
+}
+
+/* Responsive Styles for Small Screens */
+@media only screen and (max-width: 627px) {
+  .header h1{
+    font-size: 2rem;
+  }
+
+  .card {
+    width: 200px;
+    padding: 15px;
+  }
+
+  .form-group input {
+    width: 200px !important;
+  }
+
+  .navTitle{
+    display: none;
+  }
+
+  .icons{
+    font-size: 20px;
+    margin: auto;
+  }
+
+  .tab-content > .tab-pane {
+    padding: 0;
+  }
+
+  .tab-content{
+    height: auto;
+    margin-top: 30px;
+    line-height: 20px;
+  }
+
+
+  .tab-pane{
+    font-size: 11px !important;
+  }
+}
+
+@media only screen and (min-width: 300px) and (max-width: 627px) {
+  .card {
+    width: 300px;
+    padding: 20px;
+  }
+
+  .form-group input {
+    width: 100% !important;
+  }
+
+  button{
+    margin-top: 0px !important;
+}
+
+}
+
