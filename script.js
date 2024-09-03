@@ -1,21 +1,24 @@
+
+// Max Function
+
 function max() {
-    console.log("heelo");
-  
-    let number1 = parseFloat(document.getElementById("num1").value);
-    const number2 = parseFloat(document.getElementById("num2").value);
-    const resultElement = document.getElementById("max_result");
-    const errorElement = document.getElementById("max_error");
-  
-    if (isNaN(number1) || isNaN(number2)) {
-      resultElement.innerText = "";
-      errorElement.innerText = "Please enter valid numbers!";
-      return;
-    }
-    const maxValue = number1 > number2 ? number1 : number2;
-    errorElement.innerText = "";
-    resultElement.innerText = `Max: ${maxValue}`;
+  let number1 = parseFloat(document.getElementById("num1").value);
+  const number2 = parseFloat(document.getElementById("num2").value);
+  const resultElement = document.getElementById("max_result");
+  const errorElement = document.getElementById("max_error");
+
+  if (isNaN(number1) || isNaN(number2)) {
+    resultElement.innerText = "";
+    errorElement.innerText = "Please enter valid numbers!";
+    return;
   }
+  const maxValue = number1 > number2 ? number1 : number2;
+  errorElement.innerText = "";
+  resultElement.innerText = `Max: ${maxValue}`;
+}
   
+
+// Reverse Function
   function reverse() {
     const inputString = document.getElementById("stringInput").value;
     const errorElement = document.getElementById("reverse_error");
@@ -30,7 +33,8 @@ function max() {
     const reversedString = inputString.split("").reverse().join("");
     resultElement.innerText = reversedString;
   }
-  
+
+  // Findlargestword Function 
   function FindLongestWord() {
     const inputString = document.getElementById("wordInput").value;
     const errorElement = document.getElementById("longestWord_error");
@@ -57,7 +61,7 @@ function max() {
         const [name, value] = cookie.trim().split("=");
         if (name === "name") {
           document.querySelector(".header-name").innerText =
-            decodeURIComponent(value);
+            `${decodeURIComponent(value)}`;
         } else if (name === "phone") {
           document.querySelector(
             ".phone"
@@ -107,3 +111,54 @@ function max() {
     }
   }
   loadDetails();
+
+
+// jQuery
+  $(document).ready(function () {
+    $("#mypage_header h1").css({
+      display: "none",
+    });
+    // Header setup
+    $("#mypage_header").hover(
+      function () {
+        // Mouse enters
+        $("#mypage_header h1").css({
+          display: "block",
+        });
+        $(this).stop(true).animate({ height: "100px" }, 600);
+      },
+      function () {
+        // Mouse leaves
+        $("#mypage_header h1").css({
+          display: "none",
+        });
+        $(this).stop(true).animate({ height: "10px" }, 600);
+      }
+    );
+  
+    const $footer = $("#mypage_footer footer");
+    let isPopup = false;
+    $footer.css({
+      display: "none",
+    });
+    $("#mypage_footer").on("mouseenter", function () {
+      $footer.stop(true, true).slideDown(10000, function () {
+        isPopup = true;
+        $("#myModal").modal("show");
+      });
+    });
+  
+    //  slide up
+    $("#mypage_footer").on("mouseleave", function () {
+      if (!isPopup) {
+        $footer.stop(true).slideUp(500);
+      }
+    });
+  
+    $(".btn").on("click", function () {
+      isPopup = false;
+      $footer.stop(true).slideUp(500);
+    });
+  });
+
+

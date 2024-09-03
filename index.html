@@ -16,8 +16,8 @@
   <body>
     <div class="container-fluid">
       <!-- header section -->
-      <section class="header text-center bg-info text-info">
-        <h1>GOKULRAJ P</h1>
+      <section id="mypage_header" class="header text-center bg-info text-info">
+        <h1  class="header-name">GOKULRAJ P</h1>
       </section>
 
       <!-- middle section -->
@@ -27,20 +27,20 @@
           <div class="col-xs-12 col-sm-4">
             <ul class="nav nav-pills">
               <li role="presentation" class="active col-xs-3 col-sm-12">
-                <a href="#Objective" data-toggle="tab"><span class="icons glyphicon glyphicon-bookmark"></span><span class="navTitle">Objective</span></a>
+                <a href="#Objective" data-toggle="tab" data-toggle="tooltip" title="View Objective" data-placement="top"><span class="icons glyphicon glyphicon-bookmark"></span><span class="navTitle">Objective</span></a>
               </li>
               <li role="presentation" class="col-xs-3 col-sm-12">
-                <a href="#Education" data-toggle="tab"><span class="icons glyphicon glyphicon-book"></span><span class="navTitle">Education</span></a>
+                <a href="#Education" data-toggle="tab" data-toggle="tooltip" title="View Education" data-placement="top"><span class="icons glyphicon glyphicon-book"></span><span class="navTitle">Education</span></a>
               </li>
 
               <li role="presentation" class="col-xs-3 col-sm-12">
-                <a href="#Projects" data-toggle="tab"><span class="icons glyphicon glyphicon-file"></span><span class="navTitle">Projects</span></a>
+                <a href="#Projects" data-toggle="tab" data-toggle="tooltip" title="View Projects" data-placement="top" ><span class="icons glyphicon glyphicon-file"></span><span class="navTitle">Projects</span></a>
               </li>
               <li role="presentation" class="col-xs-3 col-sm-12">
-                <a href="#Experience" data-toggle="tab"><span class="icons glyphicon glyphicon-briefcase"></span><span class="navTitle">Experience</span></a>
+                <a href="#Experience" data-toggle="tab" data-toggle="tooltip" title="View Experience" data-placement="top"><span class="icons glyphicon glyphicon-briefcase"></span><span class="navTitle">Experience</span></a>
               </li>
               <li role="presentation" class="col-xs-3 col-sm-12">
-                <a href="#References" data-toggle="tab"><span class="icons glyphicon glyphicon-paperclip"></span><span class="navTitle">References</span></a>
+                <a href="#References" data-toggle="tab" data-toggle="tooltip" title="View References" data-placement="top"><span class="icons glyphicon glyphicon-paperclip"></span><span class="navTitle">References</span></a>
               </li>
             </ul>
           </div>
@@ -124,7 +124,7 @@
       <footer>
         <div class="footer-title">Contact Info</div>
         <div class="footer-info">
-          <p class="number"><span>Phone:</span>+91 7339357500</p>
+          <p class="phone"><span>Phone:</span>+91 7339357500</p>
           <p><span>Email:</span> gokulraj@cloudnix.com</p>
         </div>
       </footer>
@@ -132,26 +132,26 @@
 
     <!-- JavaScript section -->
 
-      <div class="form-container">
-        <h3 class="heading text-info text-center">Find Max Number</h3>
-        <div class="card p-4 border-1 border-danger ">
-            <form  class="form-inline"  onsubmit="return max();">
-                <div class=" form-group mb-3">
-                    <label for="num1" class="form-label ">Number 1:<span class="red-asterisk">*</span></label>
-                    <input class="form-control" type="number" id="num1" placeholder="Enter first number" required>
-                </div>
-                <div class="form-group mb-3">
-                    <label for="num2" class="form-label">Number 2:<span class="red-asterisk">*</span></label>
-                    <input class="form-control" type="number" id="num2" placeholder="Enter second number" required>
-                </div>
-                <div class="btn">
-                  <button type="submit" id="maxbtn" class="btn btn-primary ">Find Max</button>
-                </div>
-                <div id="max_result" class="text-center text-success"></div>
-                <div id="max_error" class="text-center text-danger"></div>
-            </form>
-        </div>
-    </div>
+    <div class="form-container">
+      <h3 class="heading text-info text-center">Find Max Number</h3>
+      <div class="card p-4 border-1 border-danger ">
+          <form  class="form-inline"  onsubmit="max(); return false ;">
+              <div class=" form-group mb-3">
+                  <label for="num1" class="form-label ">Number 1:<span class="red-asterisk text-danger">*</span></label>
+                  <input class="form-control" type="number" id="num1" placeholder="Enter first number" required>
+              </div>
+              <div class="form-group mb-3">
+                  <label for="num2" class="form-label">Number 2:<span class="red-asterisk text-danger">*</span></label>
+                  <input class="form-control" type="number" id="num2" placeholder="Enter second number" required autocomplete="off">
+              </div>
+              <div class="btn">
+                <button type="submit" id="maxbtn" class="btn btn-primary ">Find Max</button>
+              </div>
+              <div id="max_result" class="text-center text-success"></div>
+              <div id="max_error" class="text-center text-danger"></div>
+          </form>
+      </div>
+  </div>
 
 
     <div class="form-container ">
@@ -209,6 +209,27 @@
         </form>
     </div>
 </div>
+
+
+<div class="modal fade" tabindex="-1" role="dialog" id="myModal">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">Footer</h4>
+      </div>
+      <div class="modal-body">
+        <p>Animation Completed&hellip;</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Ok</button>
+      </div>
+    </div>
+  </div>
+
+</div>
+
 
     <script
       src="https://code.jquery.com/jquery-1.12.4.min.js"
