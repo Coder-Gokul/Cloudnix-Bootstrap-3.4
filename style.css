@@ -1,3 +1,4 @@
+
 /* General Styles */
 .header,
 .footer {
@@ -7,11 +8,11 @@
 
 .header {
   position: sticky;
-  top: 0;
+  top: 10px;
   padding-bottom: 20px;
   z-index: 100;
   margin-bottom: 55px !important;
-  border: 3px solid ;
+  border: 3px solid;
   border-radius: 10px;
   box-shadow: 3px 3px 10px 0;
 }
@@ -26,26 +27,24 @@
   float: none;
   font-weight: bold;
   font-size: large;
-  
 }
 
 .nav-pills > li > a {
-  color: #31708F ; /* Using hexadecimal color for consistency */
+  color: #31708f; /* Using hexadecimal color for consistency */
 }
 
 .nav-pills > li.active > a {
-  background-color: #D9EDF7 !important; /* Primary color */
-  color: #31708F !important; /* Primary color */
-  border: 3px solid ;
+  background-color: #d9edf7 !important; /* Primary color */
+  color: #31708f !important; /* Primary color */
+  border: 3px solid;
   border-radius: 10px;
   box-shadow: 3px 3px 10px 0;
 }
 
-.icons{
-    margin-right: 10px;
-    font-size: 15px;
+.icons {
+  margin-right: 10px;
+  font-size: 15px;
 }
-
 
 /* Tab Content */
 .tab-content > .tab-pane {
@@ -53,12 +52,11 @@
   padding: 15px;
 }
 
-
-.tab-content{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 230px;
+.tab-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 230px;
 }
 
 /* Responsive Styles */
@@ -109,7 +107,7 @@
   width: 400px;
   margin: 10px auto;
   padding: 40px;
-  background-color: #D9EDF7;
+  background-color: #d9edf7;
   border: 3px solid #83bbd6;
   border-radius: 10px;
   box-shadow: 1px 1px 10px 0;
@@ -161,11 +159,10 @@
   font-size: 20px;
 }
 
-button{
-    margin-top: 20px !important;
-    width: 60%;
+button {
+  margin-top: 20px !important;
+  width: 60%;
 }
-
 
 /* Footer Section */
 #mypage_footer {
@@ -176,7 +173,7 @@ button{
   align-items: center;
   margin-bottom: 10px;
   margin-top: 55px;
-  border: 3px solid ;
+  border: 3px solid;
   border-radius: 10px;
   box-shadow: 3px 3px 10px 0;
 }
@@ -199,13 +196,13 @@ button{
 }
 
 .footer-info p {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   font-family: var(--font3);
 }
 
 /* Responsive Styles for Small Screens */
 @media only screen and (max-width: 627px) {
-  .header h1{
+  .header h1 {
     font-size: 2rem;
   }
 
@@ -218,11 +215,11 @@ button{
     width: 200px !important;
   }
 
-  .navTitle{
+  .navTitle {
     display: none;
   }
 
-  .icons{
+  .icons {
     font-size: 20px;
     margin: auto;
   }
@@ -231,20 +228,18 @@ button{
     padding: 0;
   }
 
-  .tab-content{
+  .tab-content {
     height: auto;
     margin-top: 30px;
     line-height: 20px;
   }
 
-
-  .tab-pane{
+  .tab-pane {
     font-size: 11px !important;
   }
 }
 
 @media only screen and (min-width: 300px) and (max-width: 627px) {
- 
   .card {
     width: 300px;
     padding: 20px;
@@ -254,12 +249,19 @@ button{
     width: 100% !important;
   }
 
-  button{
+  button {
     margin-top: 0px !important;
-}
+  }
 
-.form-group{
+  .form-group {
     margin: 0;
-}
-}
+  }
 
+  .footer-title {
+    font-size: 1.4rem;
+  }
+
+  .footer-info p {
+    font-size: 1rem;
+  }
+}
