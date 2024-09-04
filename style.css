@@ -48,7 +48,7 @@
 
 /* Tab Content */
 .tab-content{
-  justify-content: left;
+justify-content: left !important;
 }
 
 .tab-content > .tab-pane {
